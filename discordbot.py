@@ -15,7 +15,7 @@ load_dotenv()
 
 intents = discord.Intents.all()
 client = discord.Client(intents=intents)
-bot = commands.Bot(command_prefix=PREFIX, intents=discord.Intents.all())
+bot = commands.Bot(command_prefix="치오야 ", intents=discord.Intents.all())
 
 
 @bot.event
@@ -297,5 +297,4 @@ async def on_command_error(ctx, error):
 
 
 token = os.environ['token']
-PREFIX = os.environ['PREFIX']
 bot.run(token)
