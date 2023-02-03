@@ -28,11 +28,7 @@ async def on_ready():
                             status=discord.Status.idle)
 
 
-@bot.command(aliases=[
-  '되돌리기', '되', '나가', '정지', '반복', '지금음악', '지금노래', '지음', '지노', '일시정지', '핑', '재생',
-  '재', '목록', '리스트', '플레이리스트', '제거', '제', '다시재생', '재게', '저장', '세이브', '검색', '찾기',
-  '서버목록', '셔플', '랜덤', '스킵', '넘기기', '볼륨'
-])
+@bot.command(aliases=['dj','dj설정','접두사설정','음악채널설정','리셋','자동재생','오토','목록초기화','재생목록초기화','가사','자막','지금노래','지금음악','지듣노','지듣음','일시정지','재생','재','이전','되돌리기','목록','재생목록','리스트','플레이리시트','제거','다시재생','재개','검색','찾기','되감기','셔플','랜덤','스킵','넘기기','정지','스탑','볼륨','소리','음악도움말','도움말음악','음악명령어','초대','초대링크','핑','지연시간','상태','봇상태'.'업타임',''])
 async def 공지(ctx):
   await ctx.send('')
 
@@ -50,7 +46,7 @@ async def 크레딧(ctx):
   embed = discord.Embed(title="크레딧", description="이 봇을 만든놈", color=0xd4b886)
   embed.add_field(name="노예주인", value="아몬드#1734", inline=False)
   embed.add_field(name="코딩노예", value="SPAEER#7411", inline=False)
-  embed.set_footer(text="PingPongTool 사용")
+  embed.set_footer(text="chio")
   await ctx.reply(embed=embed)
 
 
@@ -61,80 +57,12 @@ async def help1(ctx):
                   value="`저에게 단어를 알려줄 수 있어요!`",
                   inline=False)
   embed.add_field(name="`치오야 음악도움말`", value="`음악 기능의 도움말!`", inline=False)
-  embed.add_field(name="`치오야 미니게임도움말`",
-                  value="`미니게임 명령어를 알려드려요!`",
-                  inline=False)
   embed.add_field(name="`치오야 관리도움말`",
                   value="`서버 관리 명령어를 알려드려요!`",
                   inline=False)
   embed.add_field(name="`치오야 개발자`",
                   value="`아무도 안 궁금해 하는 치오의 개발자를 알려드려요!`",
                   inline=False)
-  embed.set_footer(text="Chio")
-  await ctx.reply('<@{}>'.format(ctx.message.author.id), embed=embed)
-
-
-@bot.command(aliases=["음악도움말", "도움말음악"])
-async def 도움말2(ctx):
-  embed = discord.Embed(title="", description="", color=0xd4b886)
-  embed.add_field(name="`음악 기능은 / 명령어도 있어요!",
-                  value="`/를 입력해보세요`",
-                  inline=False)
-  embed.add_field(name="`치오야 재생(이름,URL)",
-                  value="`음악을 재생해요.(같은 명령어 : 재)`",
-                  inline=False)
-  embed.add_field(name="`치오야 검색(이름)`",
-                  value="`음악을 검색해서 재생해요.(같은 명령어 : 찾기)`",
-                  inline=False)
-  embed.add_field(name="`치오야 목록`",
-                  value="`플레이리스트를 확인해요.(같은 명령어 : 리스트,플레이리스트`",
-                  inline=False)
-  embed.add_field(name="`치오야 스킵`",
-                  value="`음악을 스킵해요.(같은 명령어 : 넘기기)`",
-                  inline=False)
-  embed.add_field(name="`치오야 일시정지`", value="`음악을 일시정지해요`", inline=False)
-  embed.add_field(name="`치오야 다시재생`",
-                  value="`음악을 다시 재생해요 (같은 명령어 : 재개 `",
-                  inline=False)
-  embed.add_field(name="`치오야 반복`", value="`음악을 반복해요`", inline=False)
-  embed.add_field(name="`치오야 지금음악`",
-                  value="`지금 재생중인 음악을 확인해요(같은 명령어 : 지음)`",
-                  inline=False)
-  embed.add_field(name="`치오야 제거`", value="`플레이리스트에 있는 음악을 제거해요`", inline=False)
-  embed.add_field(name="`치오야 들어와`",
-                  value="`치오가 음성 채널에 접속해요(같은 명령어 : 제)`",
-                  inline=False)
-  embed.add_field(name="`치오야 나가`",
-                  value="`치오가 음성 채널을 나가요(같은 명렁어 : 정지)`",
-                  inline=False)
-  embed.add_field(name="`치오야 저장`",
-                  value="`현재 음악을 저장해서 DM으로 보내드려요.(같은 명령어 : 세이브)`",
-                  inline=False)
-  embed.add_field(name="`치오야 되돌리기`",
-                  value="`음악을 이전으로 되돌려요`(같은 명령어 : 되",
-                  inline=False)
-  embed.add_field(name="`치오야 셔플`",
-                  value="`음악을 섞어요.(같은 명령어 : 랜덤)`",
-                  inline=False)
-  embed.add_field(name="`치오야 서버목록`",
-                  value="`치오가 들어와 있는 서버를 확인해요`",
-                  inline=False)
-  embed.add_field(name="`치오야 볼륨`", value="`볼륨을 설정해요.`", inline=False)
-  embed.set_footer(text="Chio")
-  await ctx.reply('<@{}>'.format(ctx.message.author.id), embed=embed)
-
-
-@bot.command(aliases=["미니게임도움말", "도움말미니게임"])
-async def 도움말3(ctx):
-  embed = discord.Embed(title="", description="", color=0xd4b886)
-  embed.add_field(name="`치오야 돈 줘`", value="`돈줘 벅벅(쿨타임 1분)`", inline=False)
-  embed.add_field(name="`치오야 슬롯 [베팅할 돈]`",
-                  value="`모은 돈을 사용해 도박을 할 수 있어요!`",
-                  inline=False)
-  embed.add_field(name="`치오야 컬러 [베팅할 돈]`",
-                  value="`모은 돈을 사용해 컬러라는 미니게임을 할 수 있어요!`",
-                  inline=False)
-  embed.add_field(name="`치오야 트럼프`", value="`아직 미완성..!`", inline=False)
   embed.set_footer(text="Chio")
   await ctx.reply('<@{}>'.format(ctx.message.author.id), embed=embed)
 
