@@ -3,6 +3,14 @@ from distutils.sysconfig import PREFIX
 import discord
 from dotenv import load_dotenv
 import os
+from multiprocessing.connection import Client
+from discord import message
+from discord.ext import commands
+import asyncio
+import random
+import openpyxl
+from PingPongTool import PingPong
+
 load_dotenv()
 
 intents = discord.Intents.all()
