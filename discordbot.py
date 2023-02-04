@@ -36,9 +36,12 @@ async def 공지(ctx):
 TOKEN = os.environ['token']
 Authorization = os.environ['Auth']
 URL = os.environ['URL']
-
 Ping = PingPong(URL, Authorization)
 Ping2 = PingPong(URL, Authorization)
+
+@bot.command(aliases=["hitomi.la","http://hitomi.la/"])
+async def hitomi(ctx):
+  await ctx.send('경찰소로 가시죠!')
 
 
 @bot.command(aliases=['개발자', '제작자', '만든놈'])
